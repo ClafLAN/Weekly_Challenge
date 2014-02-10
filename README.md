@@ -7,7 +7,7 @@ Submission of Coding Challenges
 This repository contains all the code for the weekly programming challenge for ClafLAN members
 
 ===============================
-Please Submit all coding challenges into this repository.
+Please Submit your respose to the  coding challenges into this repository.
 
 Submit/commit  the code in the folder with the week's date and subfolder named with your programming language of your choice
 
