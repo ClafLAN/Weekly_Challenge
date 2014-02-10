@@ -19,8 +19,5 @@ Code_Assignments/02-10-14/ScipioXaos/MyClass.java
 
 If any of the above does not exists, please create the respecitve folders
 
-Make sure your first comments include your name
-
-
 ==============================
 
