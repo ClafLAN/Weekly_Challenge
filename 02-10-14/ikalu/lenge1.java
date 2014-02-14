@@ -3,7 +3,7 @@ package weeklyChallenge;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayManipulation {
+public class lenge1 {
 	public static void main(String args[]){
 		Scanner inputa = new Scanner(System.in);
 		Scanner inputb = new Scanner(System.in);
