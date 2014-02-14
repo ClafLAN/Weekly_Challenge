@@ -34,7 +34,7 @@ public class MergeList {
         while (bIndex < b.length)
             returnArray[returnIndex++] = b[bIndex++];
         
-        // Return the returnArray after casting it back to its original Type.
+        // Return the returnArray after casting it back to its original Type
         return (T[]) returnArray;
     }
     
