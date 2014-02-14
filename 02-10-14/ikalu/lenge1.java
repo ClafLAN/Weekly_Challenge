@@ -5,9 +5,20 @@ import java.util.Scanner;
 
 public class lenge1 {
 	public static void main(String args[]){
-		Scanner inputa[] = new Scanner(System.in);
-		int[] a = inputa[].nexta();
-		int[] b = {2,4,6,8,10};
+		Scanner inputa = new Scanner(System.in);
+		Scanner inputb = new Scanner(System.in);
+		
+		System.out.print("Input 5 elements for Array a: ");
+		int[] a = new int [5];
+		for (int i = 0; i < a.length; i++){
+			a[i]= inputa.nextInt();
+		}
+		
+		System.out.println("Input 5 elements for Array b: ");
+		int[] b = new int [5];
+		for (int i = 0; i < b.length; i++){
+			b[i]= inputb.nextInt();
+		}
 
 		int answer[] = new int [a.length + b.length];
 
@@ -16,8 +27,8 @@ public class lenge1 {
 
 		Arrays.sort(answer);
 
-		for(int i=0;i<answer.length;i++){
-			System.out.print(answer[i]+ " ");
+		for(int z = 0; z < answer.length; z++){
+			System.out.print(answer[z]+ " ");
 		}
 
 	}
