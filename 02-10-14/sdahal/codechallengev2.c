@@ -58,9 +58,9 @@ void add(int* array1, int array1_len, int* array2, int array2_len, int* final_ar
 	int array2_start = 0;
 	int i = 0;
     // while there are elements in any one of the array compare and add
-	for(i = 0; array1_start < array1_len && array2_start < array2_len; i++)
+	for (i = 0; array1_start < array1_len && array2_start < array2_len; i++)
 	{
-		if(array1[array1_start] < array2[array2_start])
+		if (array1[array1_start] < array2[array2_start])
         { 
             final_array[i] = array1[array1_start++];
         }
@@ -72,12 +72,12 @@ void add(int* array1, int array1_len, int* array2, int array2_len, int* final_ar
 
 	// remaining elements
 	for (;array1_start < array1_len;i++,array1_start++) 
-    { 
-        final_array[i] = array1[array1_start]; 
-    }
+    	{ 
+             final_array[i] = array1[array1_start]; 
+    	}
 	for (; array2_start < array2_len; i++, array2_start++)
-    { 
-        final_array[i] = array2[array2_start];
-    }
+    	{ 
+	     final_array[i] = array2[array2_start];
+	}
 
 } // end of add
