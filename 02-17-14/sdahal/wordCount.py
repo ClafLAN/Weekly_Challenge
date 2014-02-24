@@ -18,12 +18,10 @@ def word_counter(file_name):
     end_index = len(all_lines) - 1
     start_was_alpha_num = False
     end_was_alpha_num = False
-    count = 0
    
     
     # begin fromt the start and end unless they cross eachother
     while start_index < end_index:
-        count += 1
         # add words only if character is and was not a whitespace
         if (all_lines[start_index]).isalnum() or (all_lines[end_index]).isalnum():
             if (all_lines[start_index]).isalnum() and not start_was_alpha_num:
