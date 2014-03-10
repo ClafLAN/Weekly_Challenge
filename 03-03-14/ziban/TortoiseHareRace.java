@@ -1,7 +1,8 @@
 
 import java.util.*;
 
-public class TortoiseHareRace {
+
+public class TortoiseHareRace implements Runnable {
 
 	/*
 	 * Enum to store the movement type of tortoise
@@ -108,6 +109,7 @@ public class TortoiseHareRace {
 	 * Run method
 	 * Simulates the race between Hare and tortoise 
 	 * prints out the position in the race, and the final winner 
+	 * Thread to sleep for a second
 	 */
 	public void run(){
 
@@ -115,46 +117,51 @@ public class TortoiseHareRace {
 		int TortPos=1;
 		int HarePos=1;
 		int counter=1;
+		int i=1;
 
 		while(counter<=70){
-			if(HarePos>TortPos){
-				counter=HarePos;
-			}
-			else if(TortPos>=HarePos){
-				counter=TortPos;
-			}
-			int a=hareSteps();
-			int b=tortoiseSteps();
+			try{
+				if(HarePos>TortPos){
+					counter=HarePos;
+				}
+				else if(TortPos>=HarePos){
+					counter=TortPos;
+				}
+				int a=hareSteps();
+				int b=tortoiseSteps();
 
-			TortPos=TortPos+b;
-			HarePos=HarePos+a;
+				TortPos=TortPos+b;
+				HarePos=HarePos+a;
 
-			if(TortPos<1){
-				TortPos=1;
-			}
-			if(HarePos<1){
-				HarePos=1;
+				if(TortPos<1){
+					TortPos=1;
+				}
+				if(HarePos<1){
+					HarePos=1;
+				}
+				System.out.println("Time: "+ i);
+				System.out.println("Position of Tortoise: "+TortPos);
+				System.out.println("Position of Hare "+HarePos +"\n"+ "-----------------------------------");
+				++i;
+				if(HarePos>=70 && TortPos <70){
+					System.out.println("Hare Wins the Race");
+					break;
+				}
+				else if(TortPos>=70 && HarePos<70){
+					System.out.println("Tortoise Wins the Race");
+					break;
+				}
+				else if(TortPos>=70 && HarePos>=70){
+					System.out.println("Its a tie");
+					break;
+				}
+				Thread.sleep(1000);
 			}
 
-			System.out.println("Position of Tortoise: "+TortPos);
-			System.out.println("Position of Hare "+HarePos +"\n"+ "-----------------------------------");
-
-			if(HarePos>=70 && TortPos <70){
-				System.out.println("Hare Wins the Race");
-				break;
+			catch(InterruptedException exception){
+				System.out.println("Program interrupted");
 			}
-			else if(TortPos>=70 && HarePos<70){
-				System.out.println("Tortoise Wins the Race");
-				break;
-			}
-			else if(TortPos>=70 && HarePos>=70){
-				System.out.println("Its a tie");
-				break;
-			}
-
 		}
-
-
 	}
 
 	public static void main(String[] args) {
