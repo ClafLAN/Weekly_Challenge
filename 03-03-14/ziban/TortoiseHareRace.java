@@ -1,3 +1,6 @@
+/*
+*Author @Ziban
+*/
 
 import java.util.*;
 
@@ -109,7 +112,7 @@ public class TortoiseHareRace implements Runnable {
 	 * Run method
 	 * Simulates the race between Hare and tortoise 
 	 * prints out the position in the race, and the final winner 
-	 * Thread to sleep for a second
+	 * Thread to suspend running for a second
 	 */
 	public void run(){
 
