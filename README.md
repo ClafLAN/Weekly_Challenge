@@ -1,4 +1,4 @@
-Code_Assignments
+Weekly_Challenge
 ================
 
 Submission of Coding Challenges
